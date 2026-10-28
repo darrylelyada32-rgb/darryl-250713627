@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict-dtd.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Portal Pendaftaran Lomba Kreatif</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+        <h1>Portal Pendaftaran Lomba Kreatif Mahasiswa</h1>
+        <p class="subtitle">Silakan isi formulir di bawah ini dengan data kelompok yang valid.</p>
+
+        <form action="" method="post">
+            
+            <!-- Bagian 1: Data Tim -->
+            <h3>Informasi Tim &amp; Ketua</h3>
+            <table cellspacing="4" cellpadding="4">
+                <tr>
+                    <td class="label-col">Nama Tim Partisipan</td>
+                    <td><input type="text" name="nama_tim" placeholder="Masukkan nama tim Anda" /></td>
+                </tr>
+                <tr>
+                    <td class="label-col">Nama Lengkap Ketua</td>
+                    <td><input type="text" name="nama_ketua" placeholder="Masukkan nama ketua tim" /></td>
+                </tr>
+                <tr>
+                    <td class="label-col">Total Anggota Tim</td>
+                    <td><input type="text" name="jumlah_anggota" placeholder="Cth: 3" /></td>
+                </tr>
+                <tr>
+                    <td class="label-col">Program Studi Utama</td>
+                    <td>
+                        <select name="prodi">
+                            <option value="Informatika">Informatika</option>
+                            <option value="Sistem Informasi">Sistem Informasi</option>
+                            <option value="Teknik Industri">Teknik Industri</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+
+            <br />
+
+            <!-- Bagian 2: Pilihan Lomba -->
+            <h3>Pilihan Cabang Lomba</h3>
+            <table cellspacing="4" cellpadding="4">
+                <tr>
+                    <td class="label-col">Kategori Partisipasi</td>
+                    <td>
+                        <input type="radio" id="individu" name="kategori" value="Individu" />
+                        <label for="individu">Individu</label>
+                        <input type="radio" id="kelompok" name="kategori" value="Kelompok" />
+                        <label for="kelompok">Kelompok</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Bidang Kompetisi</td>
+                    <td>
+                        <input type="checkbox" id="programming" name="bidang[]" value="Programming" />
+                        <label for="programming">Programming &amp; Software Development</label><br />
+                        <input type="checkbox" id="uiux" name="bidang[]" value="UI/UX Design" />
+                        <label for="uiux">UI/UX Interface Design</label><br />
+                        <input type="checkbox" id="kariatulis" name="bidang[]" value="Karya Tulis" />
+                        <label for="kariatulis">Karya Tulis Ilmiah</label>
+                    </td>
+                </tr>
+            </table>
+
+            <br />
+
+            <!-- Bagian 3: Informasi Karya -->
+            <h3>Berkas &amp; Deskripsi Karya</h3>
+            <table cellspacing="4" cellpadding="4">
+                <tr>
+                    <td class="label-col">Ringkasan / Deskripsi Karya</td>
+                    <td><textarea name="deskripsi" rows="4" cols="40" placeholder="Tuliskan sinopsis singkat karya Anda di sini..."></textarea></td>
+                </tr>
+                <tr>
+                    <td class="label-col">Unggah Berkas Lomba</td>
+                    <td><input type="file" name="file_karya" /></td>
+                </tr>
+            </table>
+
+            <br />
+
+            <!-- Tombol Submit -->
+            <div class="btn-container">
+                <input type="submit" value="Kirim Pendaftaran Sekarang" class="btn-submit" />
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
